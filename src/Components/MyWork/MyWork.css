@@ -1,0 +1,128 @@
+.mywork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin: 80px 170px;
+  }
+  
+  .mywork-title {
+    text-align: center;
+  }
+  
+  .title-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .title-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px; /* Adjust size if needed */
+    height: 180px;
+    background-image: url('../../assets/theme_pattern.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    z-index: 0;
+  }
+  
+  .title-wrapper h1 {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 60px;
+    padding: 0 30px;
+  }
+  
+  .mywork-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .work-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+  }
+  
+  .work-item img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  
+  .mywork-showmore {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    padding: 16px 30px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #00C853, #69F0AE);
+    color: #fff;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .mywork-showmore:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive - Tablet */
+  @media (max-width: 1024px) {
+    .mywork {
+      margin: 60px 40px;
+      gap: 60px;
+    }
+  
+    .title-wrapper h1 {
+      font-size: 44px;
+    }
+  
+    .mywork-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .title-wrapper::before {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  /* Responsive - Mobile */
+  @media (max-width: 600px) {
+    .mywork {
+      margin: 40px 20px;
+      gap: 40px;
+    }
+  
+    .title-wrapper h1 {
+      font-size: 32px;
+      padding: 0 10px;
+    }
+  
+    .mywork-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .mywork-showmore {
+      font-size: 16px;
+      padding: 14px 24px;
+    }
+  
+    .title-wrapper::before {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  

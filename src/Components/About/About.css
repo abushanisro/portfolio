@@ -1,0 +1,296 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+  }
+  
+
+  
+.title-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  background-image: url('../../assets/theme_pattern.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.title-wrapper h1 {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 54px;
+  color: #FFFFFF;
+  padding: 0 30px;
+}
+
+
+.about-title {
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .about-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    background-image: url('../../assets/theme_pattern.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .about-title h1 {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 54px;
+    color: #FFFFFF;
+    padding: 0 30px;
+  }
+  
+  .about-title h1 {
+    padding: 0 30px;
+    font-weight: 600;
+    font-size: 80px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .about-title img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .about-section {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-left img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    max-width: 600px;
+  }
+  
+  .about-para {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  
+  .about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about-skill {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    transition: 0.3s;
+  }
+  
+  .about-skill p {
+    min-width: 150px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #00C853;
+  }
+  
+  .about-skill hr {
+    outline: none;
+    border: none;
+    width: 0;
+    height: 8px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #00C853 0.36%, #69F0AE 102.36%);
+    animation: grow-skill 2s ease-out forwards;
+    --target-width: 50%;
+  }
+  
+  @keyframes grow-skill {
+    from {
+      width: 0;
+    }
+    to {
+      width: var(--target-width);
+    }
+  }
+  
+  .about-achievements {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .about-achievement {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    transition: 0.3s;
+    text-align: center;
+    flex: 1 1 150px;
+  }
+  
+  .about-achievement h1 {
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(267deg, #00C853 0.36%, #69F0AE 102.36%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .about-achievement p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  /* Hover Effects */
+  .about-skill:hover,
+  .about-achievement:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ---------------- MOBILE RESPONSIVENESS ---------------- */
+  
+  @media (max-width: 1024px) {
+    .about {
+      margin: 60px 40px;
+      gap: 60px;
+    }
+  
+    .about-title h1 {
+      font-size: 60px;
+    }
+  
+    .about-right {
+      gap: 60px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about {
+      margin: 40px 20px;
+      gap: 50px;
+    }
+  
+    .about-title h1 {
+      font-size: 40px;
+      padding: 0 10px;
+    }
+  
+    .about-section {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+    }
+  
+    .about-left img {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    .about-para {
+      font-size: 18px;
+      gap: 16px;
+    }
+  
+    .about-skill {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  
+    .about-skill p {
+      font-size: 18px;
+      min-width: auto;
+    }
+  
+    .about-skill hr {
+      width: 100%;
+    }
+  
+    .about-achievements {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .about-achievement h1 {
+      font-size: 40px;
+    }
+  
+    .about-achievement p {
+      font-size: 18px;
+    }
+    .about-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px; /* Adequate space between icons */
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
+    
+    .about-icons svg {
+      transition: transform 0.3s ease;
+    }
+    
+    .about-icons svg:hover {
+      transform: scale(1.1); /* Slight scale effect on hover */
+    }
+    
+  }
+  
